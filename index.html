@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Kart | Shop Local</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo-glow">LK</div>
+        <div>
+          <h1>E-Kart</h1>
+          <p>Shop Local, Support Local</p>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#categories">Categories</a>
+        <button class="cart-btn" id="cartBtn">
+          <span class="material-symbols-rounded">shopping_cart</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-content">
+          <p class="eyebrow">Fresh local goods delivered fast</p>
+          <h2>Shop Local, <span>Support Local</span></h2>
+          <p>Discover the best of groceries, fruits, vegetables, dairy and more from your neighborhood.</p>
+          <div class="hero-actions">
+            <a href="#products" class="btn btn-primary">Start Shopping</a>
+            <a href="#categories" class="btn btn-secondary">Explore Categories</a>
+          </div>
+        </div>
+        <div class="hero-card glass-card">
+          <div class="hero-card-top">
+            <p>E-Kart Picks</p>
+            <span>Fast delivery · Fresh quality</span>
+          </div>
+          <div class="hero-card-items">
+            <div class="mini-product">
+              <img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443?auto=format&fit=crop&w=400&q=80" alt="Fresh Fruits" />
+              <p>Organic fruits</p>
+            </div>
+            <div class="mini-product">
+              <img src="https://images.unsplash.com/photo-1498575207497-1d1a061cd037?auto=format&fit=crop&w=400&q=80" alt="Groceries" />
+              <p>Essentials</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="search-panel">
+        <div class="search-box glass-card">
+          <input type="text" id="searchInput" placeholder="Search products by name" />
+          <button id="searchBtn">Search</button>
+        </div>
+        <div class="filter-box glass-card">
+          <label>Sort by</label>
+          <select id="sortSelect">
+            <option value="default">Recommended</option>
+            <option value="low-high">Price Low to High</option>
+            <option value="high-low">Price High to Low</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="categories" id="categories">
+        <h2>Shop by Category</h2>
+        <div class="category-grid">
+          <button class="category-item active" data-category="all">All</button>
+          <button class="category-item" data-category="Groceries">Groceries</button>
+          <button class="category-item" data-category="Fruits">Fruits</button>
+          <button class="category-item" data-category="Vegetables">Vegetables</button>
+          <button class="category-item" data-category="Dairy">Dairy</button>
+        </div>
+      </section>
+
+      <section class="products" id="products">
+        <div class="section-header">
+          <div>
+            <h2>Featured Products</h2>
+            <p>Quality local items handpicked for you.</p>
+          </div>
+          <span class="section-tag">12 Products</span>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+
+      <section class="reviews" id="reviews">
+        <div class="section-header">
+          <h2>Customer Reviews</h2>
+          <p>What shoppers love about E-Kart.</p>
+        </div>
+        <div class="review-grid">
+          <article class="review-card glass-card">
+            <div class="review-hero">
+              <h3>Delicious and fresh</h3>
+              <span>★★★★★</span>
+            </div>
+            <p>The fruits and vegetables arrived crisp and flavorful. I love supporting neighborhood growers.</p>
+            <footer>— Ayesha, regular customer</footer>
+          </article>
+          <article class="review-card glass-card">
+            <div class="review-hero">
+              <h3>Fast delivery</h3>
+              <span>★★★★★</span>
+            </div>
+            <p>E-Kart delivered my staples within hours. The packaging was clean and stylish.</p>
+            <footer>— Rahul, home chef</footer>
+          </article>
+          <article class="review-card glass-card">
+            <div class="review-hero">
+              <h3>Best dairy range</h3>
+              <span>★★★★☆</span>
+            </div>
+            <p>The dairy products are creamy, fresh, and sourced locally. Great value for money!</p>
+            <footer>— Priya, mom of two</footer>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <aside class="cart-panel" id="cartPanel">
+      <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button class="close-cart" id="closeCart">✕</button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-summary glass-card">
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span id="cartTotal">₹0.00</span>
+        </div>
+        <button class="btn btn-primary checkout-btn">Checkout Now</button>
+      </div>
+    </aside>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div>
+          <h3>Contact</h3>
+          <p>support@ekart.com</p>
+          <p>+91 98765 43210</p>
+          <p>123 Local Street, City Market</p>
+        </div>
+        <div>
+          <h3>Follow Us</h3>
+          <div class="social-list">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+          </div>
+        </div>
+      </div>
+      <p class="footer-note">© 2026 E-Kart. All rights reserved.</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

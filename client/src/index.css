@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #020617;
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(124, 92, 255, 0.35);
+}
+
+.bg-card {
+  background: rgba(15, 23, 42, 0.82);
+  backdrop-filter: blur(20px);
+}
+
+.shadow-glow {
+  box-shadow: 0 30px 80px rgba(124, 92, 255, 0.16);
+}
